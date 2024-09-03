@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-nz">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<title>Dice Roller - D&amp;D</title>
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<script src="../scripts/diceRoller/lexer.js"></script>
+	<script src="../scripts/diceRoller/ast.js"></script>
+	<script src="../scripts/diceRoller/parser.js"></script>
+    <script src="../scripts/diceRoller/types.js"></script>
+    <script src="../scripts/diceRoller/builder.js"></script>
+	<script src="../scripts/diceRoller/home.js"></script>
+</head>
+<body>
+<div class="navHolder">
+	<nav id="nav"></nav>
+</div>
+<main>
+	<div class="pageWidth">
+		<header>
+			<h1>D&amp;D Dice Roller</h1>
+		</header>
+		<section>
+            <label for="useAverageChk">Use Average</label>
+            <input id="useAverageChk" type="checkbox">
+            <br>
+			<div class="diceInputHolder">
+				<input id="inp" type="text" class="diceInput">
+			</div>
+            <button id="btn">Roll</button>
+            <div id="result"></div>
+			<ul id="rolls">
+
+			</ul>
+            <hr>
+            <label for="showDebugChk">Show Debug Info</label>
+            <input id="showDebugChk" type="checkbox">
+            <div id="debug">
+                <div id="lexTest"></div>
+                <div id="parseTest"></div>
+                <div id="buildTest"></div>
+            </div>
+		</section>
+		<div class="scrollOverflow"></div>
+	</div>
+</main>
+</body>
+</html>
