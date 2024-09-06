@@ -184,14 +184,22 @@ function build(line, useAverage){
 	function visit_Variable(node){
 		const varName = node.value.toUpperCase();
 		
+
+		let averageValue = 10.5;
+		if(varName === 'ADV')
+			averageValue = 13.825;
+		else if(varName === 'DIS')
+			averageValue = 7.175;
+
+
 		if(varName === 'ADV' || varName === 'DIS'){
 			const roll1 = {
 				sides: 20,
-				result: useAverage ? 10.5 : Math.floor((Math.random() * 20) + 1)
+				result: useAverage ? averageValue : Math.floor((Math.random() * 20) + 1)
 			};
 			const roll2 = {
 				sides: 20,
-				result: useAverage ? 10.5 : Math.floor((Math.random() * 20) + 1)
+				result: useAverage ? averageValue : Math.floor((Math.random() * 20) + 1)
 			};
 			rolls.push(roll1);
 			rolls.push(roll2);
